@@ -5,6 +5,9 @@ const passport = require('passport')
 // pull in Mongoose model for chats
 const Chat = require('../models/chat')
 
+// // import socket.io to facillitate live chat updates upon server's message receipt
+// const io = require('socket.io')
+
 // this is a collection of methods that help us detect situations when we need
 // to throw a custom error
 const customErrors = require('../../lib/custom_errors')
@@ -22,6 +25,16 @@ const removeBlanks = require('../../lib/remove_blank_fields')
 const requireToken = passport.authenticate('bearer', { session: false })
 // instantiate a router (mini app that only handles routes)
 const router = express.Router()
+
+// io.on('connection', socket => {
+//   // console log to demonstrate socket working
+//   console.log('a user connected')
+//   // when a message is sent, take it's name (owner) and the message (text)
+//   socket.on('message', ({name, message}) => {
+//     // emit the message e.g. send it to all logged in users and add to chat array of messages
+//     io.emit('message', {name, message})
+//   })
+// })
 
 // INDEX
 // GET /chats
@@ -51,6 +64,7 @@ router.get('/chats/:id', requireToken, (req, res, next) => {
     .catch(next)
 })
 
+// emit an event to publish new chat
 // CREATE
 // POST /chats
 router.post('/chats', requireToken, (req, res, next) => {

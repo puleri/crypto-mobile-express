@@ -5,6 +5,7 @@ const cors = require('cors')
 
 // require route files
 const exampleRoutes = require('./app/routes/example_routes')
+const chatRoutes = require('./app/routes/chat_routes')
 const userRoutes = require('./app/routes/user_routes')
 
 // require middleware
@@ -29,7 +30,8 @@ const clientDevPort = 7165
 // use createIndex instead of deprecated ensureIndex
 mongoose.connect(db, {
   useNewUrlParser: true,
-  useCreateIndex: true
+  useCreateIndex: true,
+  useUnifiedTopology: true
 })
 
 // instantiate express application object
@@ -62,6 +64,7 @@ app.use(requestLogger)
 
 // register route files
 app.use(exampleRoutes)
+app.use(chatRoutes)
 app.use(userRoutes)
 
 // register error handling middleware
@@ -69,9 +72,29 @@ app.use(userRoutes)
 // passed any error messages from them
 app.use(errorHandler)
 
-// run API on designated port (4741 in this case)
-app.listen(port, () => {
+// require socket.io middleware and pass it the server object
+
+const server = require('http').createServer(app)
+
+// run API on designated port (4741 in this case) / create server instance
+server.listen(port, () => {
   console.log('listening on port ' + port)
+})
+
+const io = require('socket.io')(server, {
+  cors: {
+    origin: '*'
+  }
+})
+
+// establish socket and create actions
+// console log when a client connects or disconnects from the server
+io.on('connection', (socket) => {
+  console.log('user connected')
+  // setup event listeners on socket
+  socket.on('disconnect', () => {
+    console.log('user disconnected')
+  })
 })
 
 // needed for testing
