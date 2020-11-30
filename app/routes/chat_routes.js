@@ -64,6 +64,7 @@ router.get('/chats/:id', requireToken, (req, res, next) => {
     .catch(next)
 })
 
+// emit an event to publish new chat
 // CREATE
 // POST /chats
 router.post('/chats', requireToken, (req, res, next) => {

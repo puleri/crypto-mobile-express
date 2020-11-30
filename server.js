@@ -74,12 +74,18 @@ app.use(errorHandler)
 
 // require socket.io middleware and pass it the server object
 
+const server = require('http').createServer(app)
+
 // run API on designated port (4741 in this case) / create server instance
-const server = app.listen(port, () => {
+server.listen(port, () => {
   console.log('listening on port ' + port)
 })
 
-const io = require('socket.io')(server)
+const io = require('socket.io')(server, {
+  cors: {
+    origin: '*'
+  }
+})
 
 // establish socket and create actions
 // console log when a client connects or disconnects from the server
