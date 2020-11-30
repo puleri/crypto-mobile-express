@@ -91,7 +91,6 @@ const io = require('socket.io')(server, {
 // console log when a client connects or disconnects from the server
 io.on('connection', (socket) => {
   console.log('user connected')
-
   // setup event listeners on socket
   socket.on('disconnect', () => {
     console.log('user disconnected')
