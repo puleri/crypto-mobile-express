@@ -1,17 +1,17 @@
-#!/bin/bash
+# #!/bin/bash
 
-API="http://localhost:4741"
-URL_PATH="/chats"
+# API="http://localhost:4741"
+# URL_PATH="/chats"
 
-curl "${API}${URL_PATH}" \
-  --include \
-  --request POST \
-  --header "Content-Type: application/json" \
-  --header "Authorization: Bearer ${TOKEN}" \
-  --data '{
-    "chat": {
-      "text": "'"${TEXT}"'"
-    }
-  }'
+# curl "${API}${URL_PATH}" \
+#   --include \
+#   --request POST \
+#   --header "Content-Type: application/json" \
+#   --header "Authorization: Bearer ${TOKEN}" \
+#   --data '{
+#     "chat": {
+#       "text": "'"${TEXT}"'"
+#     }
+#   }'
 
-echo
+# echo
