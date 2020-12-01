@@ -15,3 +15,5 @@ curl "${API}${URL_PATH}" \
   }'
 
 echo
+
+# TOKEN=672268936fdb0fe7b578d18ce227ea46 TEXT='First Chat Message' sh ./curl-scripts/chat/create.sh

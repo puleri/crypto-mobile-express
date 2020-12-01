@@ -7,7 +7,6 @@ const cors = require('cors')
 const exampleRoutes = require('./app/routes/example_routes')
 const chatRoutes = require('./app/routes/chat_routes')
 const userRoutes = require('./app/routes/user_routes')
-const chatRoutes = require('./app/routes/chat_routes')
 
 // require middleware
 const errorHandler = require('./lib/error_handler')
@@ -93,6 +92,10 @@ const io = require('socket.io')(server, {
 // console log when a client connects or disconnects from the server
 io.on('connection', (socket) => {
   console.log('user connected')
+  // socket.on('join', name => {
+  //   socket.broadcast.emit('message', `${name} Has Joined`)
+  // }
+  // )
   // setup event listeners on socket
   socket.on('disconnect', () => {
     console.log('user disconnected')
