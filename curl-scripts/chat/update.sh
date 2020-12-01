@@ -13,5 +13,4 @@ curl "${API}${URL_PATH}/${ID}" \
     "text": "'"${TEXT}"'"
   }
 }'
-
 echo
