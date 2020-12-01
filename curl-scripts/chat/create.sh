@@ -5,13 +5,5 @@ URL_PATH="/chats"
 
 curl "${API}${URL_PATH}" \
   --include \
-  --request POST \
-  --header "Content-Type: application/json" \
-  --header "Authorization: Bearer ${TOKEN}" \
-  --data '{
-    "chat": {
-      "text": "'"${TEXT}"'"
-    }
-  }'
-
+  --request 
 echo
