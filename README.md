@@ -8,13 +8,19 @@ An API to authenticate users and store chat resource data. It allows users to si
 - [Deployed API](https://chatroommm.herokuapp.com/)
 
 #### Technologies Used
-#### Unsolved Issues
+- Express.js
 -
+#### Unsolved Issues
+- We would like to add an option for users to create another resource with our app: a channel to house our current resource, chats.
 #### Entity Relationship Diagram
 #### API End Points
-| Verb   | URI Path               |
-|--------|------------------------|
-| POST   | `/sign-up`             |
-| POST   | `/sign-in`             |
-| DELETE | `/sign-out`            |
-| PATCH  | `/change-password`     |
+| Action | Verb   | URI Path               |
+|--------|--------|------------------------|
+| Sign-Up | POST   | `/sign-up`             |
+| Sign-In | POST   | `/sign-in`             |
+| Sign-Out | DELETE | `/sign-out`            |
+| Change Password | PATCH  | `/change-password`   |
+| Show All Chats | GET    | `/chats`             |
+| Create A Chat | POST   | `/chats`             |
+| Delete A Chat | DELETE | `/chats`            |
+| Update A Chat | PATCH  | `/chats`     |
