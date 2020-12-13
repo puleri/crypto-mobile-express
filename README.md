@@ -21,11 +21,12 @@ We decided to produce a minimal viable product before completing the Socket Midd
 - Express
 - JavaScript
 - MongoDB
+- Socket.IO
 
 ---
 
 #### Unsolved Issues
-- In the time allotted, we were not able to fully integrate sockets into our application, so it is currently more of a messaging board. We would like to emit Chat Resource CRUD events to all logged in users.
+- In the time allotted, we were not able to fully integrate Sockets into our application, so it is currently more of a messaging board. We would like to emit Chat Resource CRUD events to all logged in users.
 
  - We are also interested in establishing another resource to group Chats into Chat Rooms.
 
