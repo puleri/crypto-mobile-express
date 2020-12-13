@@ -17,7 +17,7 @@ The original strategy for the back-end work was to split the authentication and 
 #### Unsolved Issues
 - We would like to add an option for users to create another resource with our app: a channel to house our current resource, chats.
 #### Entity Relationship Diagram
-![ERD Diagram]((https://user-images.githubusercontent.com/71568993/102019069-3668bd80-3d3f-11eb-9565-fcf08c76e8ae.png)
+![ERD Diagram](https://user-images.githubusercontent.com/71568993/102019069-3668bd80-3d3f-11eb-9565-fcf08c76e8ae.png)
 #### API End Points
 | Action | Verb   | URI Path               |
 |--------|--------|------------------------|
