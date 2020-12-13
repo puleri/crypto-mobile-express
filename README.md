@@ -33,7 +33,7 @@ We decided to produce a minimal viable product before completing the Socket Midd
 ---
 
 #### Entity Relationship Diagram
-![ERD Diagram](https://user-images.githubusercontent.com/71568993/102019069-3668bd80-3d3f-11eb-9565-fcf08c76e8ae.png)
+![ERD Diagram](https://user-images.githubusercontent.com/71568993/102024033-5dce8300-3d5d-11eb-8cd5-806c4e4f8b15.png)
 
 ---
 
