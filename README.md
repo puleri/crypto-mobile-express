@@ -11,7 +11,9 @@ The original strategy for the back-end work was to split the authentication and 
 
 #### Technologies Used
 - Express.js
--
+- Javascript
+- Mongodb
+
 #### Unsolved Issues
 - We would like to add an option for users to create another resource with our app: a channel to house our current resource, chats.
 #### Entity Relationship Diagram
