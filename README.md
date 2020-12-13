@@ -1,23 +1,41 @@
 # Chatroom Express API
-An API to authenticate users and store chat resource data. It allows users to sign in and create, update, delete, and index chat resources.
+This application works as a server, storing user and chat resource data in conjunction with a client facing chat application. This program enables users to Post, Patch, Delete, and Index Resources.
+
+---
 
 ### Planning Strategy
-The original strategy for the back-end work was to split the authentication and resource routing up amongst the team, and creating the models and schemas as a group as they were a common entity that we all needed to reference in our individual work. This worked well until it came time to merge our routes. Due to our lack of communication, we were faced with a mountain of merge conflicts as our naming schemes, folders, and changes to common files clashed. After that experience, we began to mob program and communicate on nearly all of our changes.
+Setting up the server was relatively easy compared to building the client facing application. As a team, we constructed an ERD to visualize our resources and we were able to program pathways to manage chat resources within the first two days of work.
+
+We decided to produce a minimal viable product before completing the Socket Middleware but still managed to establish a Socket Connection and Disconnect linked to the Chat Index CRUD Action.
+
+---
 
 ### Important Links
 - [Client Repository](https://github.com/Mandeloreann/chat-room-express-2)
 - [Deployed Client](https://mandeloreann.github.io/chat-room/#/)
 - [Deployed API](https://chatroommm.herokuapp.com/)
 
+---
+
 #### Technologies Used
-- Express.js
-- Javascript
-- Mongodb
+- Express
+- JavaScript
+- MongoDB
+
+---
 
 #### Unsolved Issues
-- We would like to add an option for users to create another resource with our app: a channel to house our current resource, chats.
+- In the time allotted, we were not able to fully integrate sockets into our application, so it is currently more of a messaging board. We would like to emit Chat Resource CRUD events to all logged in users.
+
+ - We are also interested in establishing another resource to group Chats into Chat Rooms.
+
+---
+
 #### Entity Relationship Diagram
 ![ERD Diagram](https://user-images.githubusercontent.com/71568993/102019069-3668bd80-3d3f-11eb-9565-fcf08c76e8ae.png)
+
+---
+
 #### API End Points
 | Action | Verb   | URI Path               |
 |--------|--------|------------------------|
