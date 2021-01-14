@@ -1,7 +1,7 @@
-'use strict'
+// 'use strict'
 
 // creating a base name for the mongodb
-const mongooseBaseName = 'chat-room'
+const mongooseBaseName = 'crypto-mobile'
 
 // create the mongodb uri for development and test
 const database = {

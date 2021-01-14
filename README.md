@@ -11,8 +11,8 @@ We decided to produce a minimal viable product before completing the Socket Midd
 ---
 
 ### Important Links
-- [Client Repository](https://github.com/Mandeloreann/chat-room-express-2)
-- [Deployed Client](https://mandeloreann.github.io/chat-room/#/)
+- [Client Repository](https://github.com/puleri/crypto-mobile-express)
+- [Deployed Client](https://puleri.github.io/crypto-mobile/#/)
 - [Deployed API](https://chatroommm.herokuapp.com/)
 
 ---
