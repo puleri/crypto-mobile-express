@@ -25,6 +25,11 @@ const requireToken = passport.authenticate('bearer', { session: false })
 // instantiate a router (mini app that only handles routes)
 const router = express.Router()
 
+router.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*')
+  next()
+})
+
 // SIGN UP
 // POST /sign-up
 router.post('/sign-up', (req, res, next) => {
