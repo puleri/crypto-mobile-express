@@ -11,9 +11,9 @@ We decided to produce a minimal viable product before completing the Socket Midd
 ---
 
 ### Important Links
-- [Client Repository](https://github.com/puleri/crypto-mobile-express)
+- [Client Repository](https://github.com/puleri/crypto-mobile)
 - [Deployed Client](https://puleri.github.io/crypto-mobile/#/)
-- [Deployed API](https://chatroommm.herokuapp.com/)
+- [Deployed API](https://polar-hamlet-87107.herokuapp.com/)
 
 ---
 
